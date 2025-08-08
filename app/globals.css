@@ -28,3 +28,21 @@ body {
 .btnPrimary:hover { background: var(--brand-500); }
 .btnOutline { border: 1px solid var(--border); color: var(--fg); background: #fff; }
 .btnOutline:hover { background: var(--brand-50); }
+
+/* Responsive container paddings for mobile & tablet */
+@media (max-width: 767px){
+  .container { padding-left: 14px; padding-right: 14px; }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .container { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 767px){
+  a, button { min-height: 44px; }
+  input { min-height: 44px; }
+}
+
+/* iOS safe-area support */
+body { padding-bottom: env(safe-area-inset-bottom); }
+header, footer { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }

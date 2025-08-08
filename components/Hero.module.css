@@ -1,57 +1,17 @@
-.wrap {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 40px 16px 64px;
-}
+.wrap { display: grid; grid-template-columns: 1fr; gap: 24px; padding: 40px 16px 64px; }
+@media (min-width: 768px){ .wrap { grid-template-columns: 1fr 1fr; align-items: center; } }
+.title { font-size: 28px; line-height: 1.15; font-weight: 800; }
+@media (min-width: 768px){ .title { font-size: 44px; } }
+.accent { color: var(--brand-600); }
+.lead { margin-top: 12px; font-size: 18px; color: var(--muted); }
+.actions { display:flex; gap: 12px; margin-top: 20px; }
+.subnote { margin-top: 8px; color: var(--muted); font-size: 14px; }
+.colMedia { aspect-ratio: 4/3; border-radius: var(--radius-xl); background: #f3f4f6; box-shadow: inset 0 1px 4px rgba(0,0,0,.06); }
 
-@media (min-width: 768px) {
-    .wrap {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
+@media (max-width: 374px){
+  .title { font-size: 24px; }
+  .lead { font-size: 16px; }
 }
-
-.title {
-    font-size: 28px;
-    line-height: 1.15;
-    font-weight: 800;
-}
-
-@media (min-width: 768px) {
-    .title {
-        font-size: 44px;
-    }
-}
-
-.accent {
-    color: var(--brand-600);
-}
-
-.lead {
-    margin-top: 12px;
-    font-size: 18px;
-    color: var(--muted);
-}
-
-.actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.subnote {
-    margin-top: 8px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.colMedia {
-    aspect-ratio: 4/3;
-    border-radius: var(--radius-xl);
-    background: #f3f4f6;
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .06);
-    background-image: url(https://chblob.icloudhospital.com/thumbnails/2-e7a51d34-1b35-4c05-8f0b-db38771ca1b3.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (min-width: 1024px){
+  .title { font-size: 48px; }
 }

@@ -31,6 +31,25 @@ body {
 .btnPrimary:hover { background: var(--brand-500); }
 .btnOutline { border: 1px solid var(--border); color: var(--fg); background: #fff; }
 .btnOutline:hover { background: var(--brand-50); }
+
+/* Responsive container paddings for mobile & tablet */
+@media (max-width: 767px){
+  .container { padding-left: 14px; padding-right: 14px; }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .container { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 767px){
+  a, button { min-height: 44px; }
+  input { min-height: 44px; }
+}
+
+/* iOS safe-area support */
+body { padding-bottom: env(safe-area-inset-bottom); }
+header, footer { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/.pnpm/next@15.3.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/.pnpm/next@15.3.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/Header.module.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -39,13 +58,28 @@ body {
   position: sticky; top: 0; z-index: 50;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.92);
   border-bottom: 1px solid var(--border);
 }
-.Header_row__3Tanc { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.Header_row__3Tanc { display: grid; grid-template-columns: 1fr auto; align-items: center; grid-gap: 8px; gap: 8px; padding: 12px 0; }
 .Header_logo____uDV { font-weight: 800; font-size: 20px; color: var(--fg); text-decoration: none; }
 .Header_accent__STGlb { color: var(--brand-600); }
-.Header_nav__tNWGY { display: flex; gap: 16px; }
-.Header_navLink__Rvw2c { font-size: 14px; color: var(--fg); text-decoration: none; padding: 8px 10px; border-radius: 999px; }
+
+/* Burger (visible on mobile) */
+.Header_burger__9ocpS { display: inline-flex; flex-direction: column; gap: 4px; padding: 8px 10px; border: 1px solid var(--border); background: #fff; border-radius: 10px; cursor: pointer; }
+.Header_burgerLine__UtdWD { width: 20px; height: 2px; background: var(--fg); border-radius: 1px; }
+
+/* Nav */
+.Header_nav__tNWGY { display: none; }
+.Header_navOpen__6g0mV { display: grid; grid-gap: 6px; gap: 6px; margin-top: 8px; }
+.Header_navLink__Rvw2c { font-size: 14px; color: var(--fg); text-decoration: none; padding: 10px 12px; border-radius: 999px; }
 .Header_navLink__Rvw2c:hover { color: var(--brand-600); background: var(--brand-50); }
 .Header_navCta__kwh3v { border: 1px solid var(--border); }
+
+/* Tablet & up */
+@media (min-width: 768px){
+  .Header_row__3Tanc { grid-template-columns: 1fr auto; }
+  .Header_burger__9ocpS { display: none; }
+  .Header_nav__tNWGY { display: flex; gap: 16px; align-items: center; }
+  .Header_navOpen__6g0mV { display: flex; }
+}

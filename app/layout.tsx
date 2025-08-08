@@ -2,6 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#ffffff',
+}
+
 export const metadata: Metadata = {
   title: 'Fit by Nika — персональні тренування та відеокурс',
   description: 'Ефективні тренування для жінок: жироспалення, тонус і здорові звички. Купуйте відеокурс онлайн.',

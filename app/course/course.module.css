@@ -4,9 +4,12 @@
 .price { margin-top: 12px; font-size: 24px; font-weight: 800; }
 .subTitle { margin-top: 36px; font-size: 20px; font-weight: 700; }
 .lessons { margin-top: 12px; display: grid; gap: 12px; grid-template-columns: 1fr; padding: 0; list-style: none; }
-@media (min-width: 640px){ .lessons { grid-template-columns: 1fr 1fr; } }
+ }
 .lessonItem { display:flex; align-items:center; justify-content:space-between; font-size: 14px; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius-xl); }
 .lessonTime { color: var(--muted); }
 .info { margin-top: 28px; padding: 24px; border:1px solid var(--border); border-radius: var(--radius-xl); }
 .infoTitle { font-weight: 700; }
 .infoList { margin-top: 8px; color: var(--muted); }
+
+@media (min-width: 640px){ .lessons { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px){ .lessons { grid-template-columns: 1fr 1fr 1fr; } }

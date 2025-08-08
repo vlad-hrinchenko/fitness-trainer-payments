@@ -6,3 +6,9 @@
 .full { grid-column: 1 / -1; }
 .btn { grid-column: 1 / -1; }
 .note { margin-top: 8px; color: #059669; }
+
+.honeypot { 
+  position: absolute; left: -9999px; top: -9999px; 
+  opacity: 0; width: 1px; height: 1px;
+}
+.error { margin-top: 6px; color: #dc2626; }
