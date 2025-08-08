@@ -1,0 +1,13 @@
+.header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,.85);
+  border-bottom: 1px solid var(--border);
+}
+.row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.logo { font-weight: 800; font-size: 20px; color: var(--fg); text-decoration: none; }
+.accent { color: var(--brand-600); }
+.nav { display: flex; gap: 16px; }
+.navLink { font-size: 14px; color: var(--fg); text-decoration: none; padding: 8px 10px; border-radius: 999px; }
+.navLink:hover { color: var(--brand-600); background: var(--brand-50); }
+.navCta { border: 1px solid var(--border); }

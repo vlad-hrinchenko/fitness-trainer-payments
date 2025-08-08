@@ -1,0 +1,30 @@
+:root {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --brand-50: #fff7fb;
+  --brand-500: #f472b6;
+  --brand-600: #ec4899;
+  --radius-xl: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.container { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+
+/* Utilities */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding: 12px 20px; font-weight: 600; text-decoration: none; cursor: pointer; }
+.btnPrimary { background: var(--brand-600); color: #fff; }
+.btnPrimary:hover { background: var(--brand-500); }
+.btnOutline { border: 1px solid var(--border); color: var(--fg); background: #fff; }
+.btnOutline:hover { background: var(--brand-50); }
